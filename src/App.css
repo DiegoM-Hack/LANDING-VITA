@@ -5,38 +5,65 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Estilo general*/
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url(https://londresando.com/wp-content/uploads/sites/15/2022/03/big-ben-londres.jpeg);
+  background-size: cover;
+  background-position: center; /* Centra la imagen de fondo */
+  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+  padding: 0; /* Elimina padding del cuerpo */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Encabezado */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3498db; 
+  padding: 10px 20px;
+  margin-top: -28%;
+}
+/* Logo */
+.logo img {
+  height: 150px; /* tamaño del logo */
+  margin-left: 50px;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: translateY(-10px); /* Mover hacia arriba 10px */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Navegación */
+.nav {
+  display: flex;
+  gap: 70px;
+  position: relative;
 }
 
-.card {
-  padding: 2em;
+.nav a {
+  color: rgb(255, 255, 255); /* Color de texto blanco */
+  text-decoration: none; 
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative; 
+  padding: 5px 0; /* Espaciado vertical */
+  transition: transform 0.3s ease, color 0.3s ease; /* Animación suave */
 }
 
-.read-the-docs {
-  color: #888;
+.nav a:hover,.nav a.active {
+  color: #000000; 
+  transform: translateY(-5px); /*  hacia arriba */
 }
+.nav a:hover::after,.nav a.active::after {
+  content: ""; /* Línea decorativa */
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  height: 2px; /* Grosor*/
+  background-color: #000000; 
+}
+
