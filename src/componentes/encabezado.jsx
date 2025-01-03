@@ -1,29 +1,23 @@
-import React from "react";
-import logo from "../imagenes/logoD.png"
-import '../App.css'
+import { Link } from 'react-router-dom';
+import '../estilos/App.css';
 
-export function Encabezado() {
-    return (
-      <div className="App">
-        <header class="header" id="inicio">
-        
-        <div className="logo">
-            <img src={logo} className="App-logo" alt="logo" />
-        </div>
-        
-        <nav class="nav">
-            <a href="#inicio">Inicio</a>
-            <a href="#descripcion">Descripción</a>
-            <a href="#mapa">Ubicación</a>
-            <a href="#informacion">Información</a>
-            <a href="nostros.html" target="_blank">Nosotros</a>
-            <a href="portal.html" target="_blank">Portal en linea</a>
-        </nav>
-    </header>
+const Encabezado = () => {
+  return (
+    <header className="header" id="inicio">
+      <div className="logo">
+        <img src="./imagenes/logoD.png" alt="Logo" />
       </div>
-    );
-  }
-  
-  export default Encabezado;
+      <nav className="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#descripcion">Descripción</a>
+        <a href="#mapa">Ubicación</a>
+        <a href="#informacion">Información</a>
+        <a href="nostros.html" target="_blank">Nosotros</a>
+        <Link to="/portal" target='_blank'>Portal en Línea</Link>
+      </nav>
+    </header>
+  );
+};
 
+export default Encabezado;
 

@@ -1,0 +1,143 @@
+/* Estilo general*/
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url(https://londresando.com/wp-content/uploads/sites/15/2022/03/big-ben-londres.jpeg);
+  background-size: cover;
+  background-position: center; /* Centra la imagen de fondo */
+  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+  padding: 0; /* Elimina padding del cuerpo */
+  
+}
+
+/* Encabezado */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3498db; 
+  padding:5px 20px;
+}
+/* Logo */
+.logo img {
+  height: 150px; /* tamaño del logo */
+  margin-left: 50px;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: translateY(-10px); /* Mover hacia arriba 10px */
+}
+
+/* Navegación */
+.nav {
+  display: flex;
+  gap: 70px;
+  position: relative;
+}
+
+.nav a {
+  color: rgb(255, 255, 255); /* Color de texto blanco */
+  text-decoration: none; 
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative; 
+  padding: 5px 0; /* Espaciado vertical */
+  transition: transform 0.3s ease, color 0.3s ease; /* Animación suave */
+}
+
+.nav a:hover,.nav a.active {
+  color: #000000; 
+  transform: translateY(-5px); /*  hacia arriba */
+}
+.nav a:hover::after,.nav a.active::after {
+  content: ""; /* Línea decorativa */
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  height: 2px; /* Grosor*/
+  background-color: #000000; 
+}
+
+/* Sección de información */
+.info-section {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.7); /* Fondo casi transparente */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin: 50px auto; /* Centrado horizontal */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos dentro de la sección */
+  justify-content: center; /* Centra verticalmente */
+  min-height: 400px; /* Altura mínima para el contenedor */
+}
+
+
+/* Título de la sección */
+.info-section h1 {
+  text-align: center;
+  color: #3498db;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Párrafo introductorio */
+.info-section p {
+  text-align: center;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Estilo de la tabla */
+.info-table {
+  width: 80%; /* Ajusta el ancho de la tabla */
+  max-width: 1200px; /* Máximo ancho de la tabla */
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Estilos de las celdas de la tabla */
+.info-table th,
+.info-table td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #b4b4b4;
+}
+
+/* Encabezados de las tablas */
+.info-table th {
+  background-color: #3498db;
+  color: white;
+  font-size: 18px;
+}
+
+/* Filas alternas de la tabla */
+.info-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover en las filas de la tabla */
+.info-table tbody tr:hover {
+  background-color: #e2f4f7;
+  transform: scale(1.02);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Celda de descripción */
+.info-table td {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Estilo de las listas dentro de la tabla */
+.info-table ul {
+  margin: 0;
+  padding-left: 20px;
+}

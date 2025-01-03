@@ -1,0 +1,174 @@
+  
+ .background {
+    background-image: url('https://wallpapers.com/images/hd/english-2000-x-1333-wallpaper-di44s6r4zq9mj991.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100vw; /* Asegura que ocupe el ancho completo */
+    height: 100%; /* Asegura que ocupe el alto completo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+  /* Contenedor Principal */
+  .login-container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Encabezado */
+  .headerportal h1 {
+    color: #3498db;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .headerportal span {
+    color: #000;
+  }
+  
+  /* Caja de Inicio de Sesión */
+  .login-box {
+    text-align: center;
+  }
+  
+  .logo {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Formulario */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover {
+    background-color: #001a33;
+  }
+  
+  .forgot-link {
+    color:#000;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .forgot-link:hover {
+    text-decoration: underline;
+  }
+  
+  hr {
+    border: 0.5px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .btn-secondary {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #001a33;
+  }
+  
+  /* Footer */
+
+
+
+  .social-container {
+    text-align: center; 
+    margin-top: 20px;   
+}
+
+
+.follow-text {
+    font-size: 18px;     
+    color: #fff;          
+    font-weight: bold;    
+    margin-bottom: 5px;  
+}
+
+
+  footer {
+    background-color: #001a33;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: white;
+    font-size: 15px;
+  }
+  
+  .social-icons {
+    margin-top: 20px;               /* Aumenta el espacio entre los íconos y el texto */
+    display: flex;
+    justify-content: center;        /* Centra los enlaces */
+    align-items: center;
+    gap: 15px;                      /* Espacio entre los enlaces */
+}
+
+.social-icons a {
+    color: #fff;                    /* Color blanco */
+    font-size: 16px;                 /* Tamaño de la fuente */
+    text-decoration: none;          /* Quita el subrayado */
+    font-weight: bold;              /* Hace el texto en negrita */
+    transition: color 0.3s ease;    /* Transición suave para el cambio de color */
+}
+
+.social-icons a:hover {
+    color: #3498db;                 /* Cambia el color al pasar el ratón */
+}
+  
+  .footer-bottom {
+    margin-top: 10px;
+    font-size: 15px;
+    color: white;
+  }
