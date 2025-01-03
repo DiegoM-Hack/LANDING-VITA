@@ -1,3 +1,4 @@
+import React from "react";
 import logo from "../imagenes/logoD.png"
 import '../App.css'
 
