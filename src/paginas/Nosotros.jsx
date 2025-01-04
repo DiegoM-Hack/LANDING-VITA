@@ -53,3 +53,5 @@ import '../estilos/nosotros.css';
     </>
     );
 }
+
+export default Nosotros
