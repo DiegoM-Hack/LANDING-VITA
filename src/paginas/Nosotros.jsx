@@ -1,16 +1,10 @@
-export function Nosotros (){
+import '../estilos/nosotros.css';
+
+
+ const Nosotros = () => {
     return(
-        <body>
-    <header class="header" id="nosotros">
-        <div class="logo">
-            <img src="imagenes/logoD.png" alt="Logo"/>
-        </div>
-        <nav class="nav">
-            <a href="landing.html">Inicio</a>
-            <a href="#certificados">Certificados</a>
-            <a href="#galeria">Galería</a>
-        </nav>
-    </header>
+       <>
+    
 
     
     <section class="seccion-certificados" id="certificados">
@@ -55,8 +49,7 @@ export function Nosotros (){
             <a href="https://www.facebook.com/CEC.EPN.EC" target="_blank"><img class="Facebook" src="imagenes/facebock logo.png" alt="Facebook"/></a>
         </div>
     </footer>
-</body>
 
+    </>
     );
 }
-export default Nosotros;

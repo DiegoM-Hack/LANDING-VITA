@@ -1,4 +1,5 @@
 body {
+
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-image: url(https://londresando.com/wp-content/uploads/sites/15/2022/03/big-ben-londres.jpeg);
@@ -15,9 +16,19 @@ body {
     background-color: #3498db; 
     padding:5px 20px;
   }
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://londresando.com/wp-content/uploads/sites/15/2022/03/big-ben-londres.jpeg);
+    background-size: cover;
+    margin: 0;
+}
 
-   /* Navegación */
-   .nav {
+
+
+/* Navegación */
+.nav {
     display: flex;
     gap: 20px;
     font-family:cursive;
@@ -47,29 +58,40 @@ body {
         background-color: #000000; 
       }
 
+.nav a {
+    color: rgb(0, 0, 0); /* Color de texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: #ee2323; /* Color al pasar el mouse */
+}
 
 .logo img {
-        height: 100px; /* tamaño del logo */
-        }
+    height: 100px; /* tamaño del logo */
+}
 
-.contenedor_Padre{
+.contenedor_Padre {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-top: 1%;
     margin-bottom: 1%;
+    width: 1000px;
 }
-.contenedor_hijo1{
+
+.contenedor_hijo1 {
     border: 1px solid #ccc; /* Opcional: para visualizar mejor las cajas */
     padding: 20px; /* Espaciado interno */
-    width: 40%;
-    
+    width: 100%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para un mejor diseño */
     text-align: center; /* Centrar texto dentro de las cajas */
     background-color: rgba(0, 48, 87, 0.678);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 .contenedor_hijo1 p{
     color: aliceblue;
@@ -78,34 +100,44 @@ body {
     color: aliceblue;
 }
 
-.imagenes_idiomas{
+
+
+.imagenes_idiomas {
     width: 100px; /* Ancho fijo */
     height: 100px; /* Alto fijo */
     object-fit: cover; /* Ajusta la imagen sin deformarla */
     margin-bottom: 0px; /* Separación entre la imagen y el contenido */
 }
+
 .boton_idiomas{
     color: rgb(255, 255, 255);
     background-color:rgb(0, 41, 80);
     border-radius: 200px;
-    cursor: pointer;
-    
 }
-.boton_idiomas:hover{
+.boton_idiomas {
+    color: black;
+    background-color: rgb(226, 43, 198);
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.boton_idiomas:hover {
     transform: translateY(-2px); /* Efecto de elevación */
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra al pasar */
 }
-footer{
-    background-color: rgb(0, 0, 0, 0.719);
-    
+
+footer {
     width: 100%;
-    
+    background-color: rgb(0, 0, 0, 0.719);
     padding: 20px 0 90px 0;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Necesario para posicionar las redes sociales */ }
+    position: relative; /* Necesario para posicionar las redes sociales */
+}
+
 
     .WhatsApp{
         width: 40px;
@@ -135,4 +167,34 @@ footer{
     }
 .copyright p{
     color: #ccc;
+}
+
+.WhatsApp {
+    width: 40px;
+    height: 40px;
+}
+
+.Instagram {
+    width: 50px;
+    height: 40px;
+}
+
+.Facebook {
+    width: 40px;
+    height: 40px;
+}
+
+.redes_sociales {
+    position: absolute;
+    bottom: 10px; /* Ajusta según prefieras la distancia desde abajo */
+    right: 10px; /* Ajusta según prefieras la distancia desde la derecha */
+    display: flex;
+    gap: 10px; /* Espacio entre los íconos */
+}
+
+.copyright {
+    position: absolute;
+    bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+    right: 81%; /* Ajusta la distancia desde el borde derecho */
+    text-align: center; /* Alinea los enlaces a la derecha */
 }
