@@ -5,7 +5,7 @@ const Encabezado = () => {
   return (
     <header className="header" id="inicio">
       <div className="logo">
-        <img src="./imagenes/logoD.png" alt="Logo" />
+        <img src="./imagenes/icono.png" alt="Logo" />
       </div>
       <nav className="nav">
         <Link to="App">Home</Link>

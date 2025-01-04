@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import encabezado from './componentes/Encabezado';
+import Encabezado from './componentes/Encabezado';
 import MisionVision from './componentes/MisionVision';
 import DescripcionCurso from './componentes/DescripcionCurso';
 import VentajasBeneficios from './componentes/VentajasBeneficios';
@@ -17,7 +17,7 @@ function App() {
           path="/"
           element={
             <>
-              <encabezado /> 
+              <Encabezado /> 
               <MisionVision />
               <DescripcionCurso />
               <VentajasBeneficios />
