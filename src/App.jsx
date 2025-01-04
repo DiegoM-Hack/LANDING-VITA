@@ -7,6 +7,7 @@ import Ubicacion from './componentes/Ubicacion';
 import FormularioInscripcion from './componentes/FormularioInscripcion';
 import PortalEnLinea from './paginas/PortalEnLinea';
 import Idiomas from './paginas/Idiomas';
+import Nosotros from './paginas/Nosotros';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         {/* Página del portal, solo muestra el portal */}
         <Route path="/portal" element={<PortalEnLinea />} />
         <Route path="/idiomas" element={<Idiomas />} />
+        <Route path="/nosotros" element={<Nosotros/>} />
       </Routes>
 
     </Router>
