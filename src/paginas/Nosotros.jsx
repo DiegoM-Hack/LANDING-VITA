@@ -1,5 +1,4 @@
-
-
+import '../estilos/nosotros.css';
 
 export function Nosotros (){
     return(
@@ -61,4 +60,5 @@ export function Nosotros (){
 </body>
 
     );
-}
+};
+export default Nosotros;
