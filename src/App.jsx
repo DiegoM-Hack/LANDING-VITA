@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Encabezado from './componentes/encabezado';
-import Informacion from './componentes/Informacion';
+import Encabezado from './componentes/Encabezado';
+import MisionVision from './componentes/MisionVision';
+import DescripcionCurso from './componentes/DescripcionCurso';
+import VentajasBeneficios from './componentes/VentajasBeneficios';
+import Ubicacion from './componentes/Ubicacion';
+import FormularioInscripcion from './componentes/FormularioInscripcion';
 import PortalEnLinea from './paginas/PortalEnLinea';
-
-
-
-
-
+import Idiomas from './paginas/Idiomas';
 
 function App() {
   return (
@@ -17,19 +17,25 @@ function App() {
           path="/"
           element={
             <>
-              <Encabezado /> {/* Encabezado visible solo en la página principal */}
-              <Informacion /> {/* Información principal */}
+              <Encabezado /> 
+              <MisionVision />
+              <DescripcionCurso />
+              <VentajasBeneficios />
+              <Ubicacion />
+              <FormularioInscripcion />
             </>
           }
         />
 
         {/* Página del portal, solo muestra el portal */}
         <Route path="/portal" element={<PortalEnLinea />} />
+        <Route path="/idiomas" element={<Idiomas />} />
       </Routes>
+
     </Router>
+    
+
   );
-};
+}
 
 export default App;
-
-

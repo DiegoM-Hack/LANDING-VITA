@@ -1,4 +1,5 @@
-import '../estilos/nosotros.css';
+
+
 
 export function Nosotros (){
     return(
