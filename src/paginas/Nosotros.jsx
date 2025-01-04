@@ -1,3 +1,6 @@
+
+
+
 export function Nosotros (){
     return(
         <body>
@@ -58,4 +61,5 @@ export function Nosotros (){
 </body>
 
     );
-}
+};
+export default Nosotros;
