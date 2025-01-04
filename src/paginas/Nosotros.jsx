@@ -1,6 +1,3 @@
-
-
-
 export function Nosotros (){
     return(
         <body>

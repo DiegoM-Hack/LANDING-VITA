@@ -141,3 +141,402 @@ body {
   margin: 0;
   padding-left: 20px;
 }
+/* Estilo general*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-image: url(https://londresando.com/wp-content/uploads/sites/15/2022/03/big-ben-londres.jpeg);
+background-size: cover;
+background-position: center; /* Centra la imagen de fondo */
+background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+padding: 0; /* Elimina padding del cuerpo */
+
+}
+
+
+/* Logo */
+.logo img {
+height: 100px; /* tamaño del logo */
+}
+
+/* Navegación */
+.nav {
+display: flex;
+gap: 20px;
+font-family:cursive;
+}
+
+.nav a {
+color: rgb(0, 0, 0); /* Color de texto blanco */
+text-decoration: none; /* Sin subrayado */
+font-size: 16px;
+}
+
+.nav a:hover {
+color: #ee2323; /* Color al pasar el mouse */
+}
+
+/* Sección de información */
+.infoseccion {
+text-align: center;
+padding: 20px;
+font-family: Arial, sans-serif;
+background-color: rgba(112, 114, 116, 0.7);
+
+}
+
+.infoseccion h2 {
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.titulo-info{
+color: black;
+width: 200px;
+margin: 0 auto;
+}
+
+/* Estilos de tabla */
+.tabla {
+width: 80%;
+margin: 0 auto;
+border-collapse: collapse;
+font-size: 16px;
+background-color: white;
+}
+
+.tabla th,.tabla td {
+border: 1px solid black;
+padding: 8px;
+text-align: center;
+}
+
+.tabla th {
+background-color: green;
+color: white;
+}
+
+.tabla tr:nth-child(even) {
+background-color: #dbdbdb;
+}
+
+/*seccion mision*/
+.seccionM {
+  display: flex;
+  align-items: center;
+  height: 500px;
+  font-size: x-large;
+  font-family: 'Times New Roman', Times, serif;
+background-color: rgba(112, 114, 116, 0.7);
+  
+  }    
+
+.mision{
+  background: rgba(11, 162, 238, 0.548);
+  margin: 2%;
+  padding: 1%;
+  border-radius: 8%;
+}
+.mision p{
+  color: #dbdbdb;
+}
+.vision p{
+  color: #dbdbdb;
+}
+.vision{
+background: rgba(11, 162, 238, 0.548);
+  
+  padding: 1%;
+  border-radius: 8%;
+  margin: 2%;
+}
+
+/*seccion1*/
+.seccion1 {
+display: flex;
+align-items: center;
+height: 500px;
+font-size: x-large;
+font-family: 'Times New Roman', Times, serif;
+background-color: rgba(112, 114, 116, 0.7);
+padding-left: 5%;
+}
+
+/*formato de la imagen*/
+section div img{
+height: 400px;
+width: 500px;
+border-radius: 50px;
+}
+/*texto descriptivo*/
+.descripcion1 {
+background: rgba(11, 162, 238, 0.548);
+border: 101px;
+margin: 50px;
+border-radius: 50px;
+text-align: center;
+color: white;
+}
+
+.title2{
+color: black;
+}
+
+.map-container {
+justify-content: center;
+margin-top: 10px;
+}
+
+/*Pocicio del video*/
+.video1{
+padding-top: 120px;
+padding-right: 100px;
+border-color:rgba(0, 0, 0, 0);
+}
+
+/*Seccion de ubicacion*/
+.location {
+display: flex;
+height: 500px;
+font-size: x-large;
+font-family: 'Times New Roman', Times, serif;  
+padding-bottom: 5%;
+justify-content: space-between;
+background-color: rgba(112, 114, 116, 0.7);
+
+padding-left: 5%;
+}
+/*Estilos SECCION 2*/
+
+body {
+background-size: cover; /* Cubre toda el área disponible */
+background-position: center; /* Centra la imagen de fondo */
+background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+margin: 0; /* Elimina márgenes del cuerpo */
+padding: 0; /* Elimina padding del cuerpo */
+font-family: Arial, sans-serif; /* Fuente utilizada para el texto */
+background-color: rgba(67, 131, 196, 0.7);
+}
+
+
+/* Sección de sobre nosotros */
+.seccion-ventajas {
+display: flex; /* Utiliza flexbox para las secciones */
+align-items: center; /* Centra verticalmente los elementos */
+padding: 50px; /* Espaciado interno */
+background-color: rgba(112, 114, 116, 0.7);
+
+}
+
+.imagen-ventajas {
+flex: 1; /* Cada imagen ocupa igual espacio */
+}
+
+.imagen-ventajas img {
+width: 80%; /* Ancho completo de la imagen */
+text-align: right;
+border-radius: 40px; /* Bordes redondeados */
+padding-left: 100px;
+}
+.contenido-ventajas {
+flex: 1; /* Cada contenido ocupa igual espacio */
+text-align: left; /* Alinea el texto a la izquierda */
+background-color:rgba(11, 162, 238, 0.548);
+border-radius: 40px;
+}
+
+.contenido-info {
+  flex: 1; /* Cada contenido ocupa igual espacio */
+  text-align: left; /* Alinea el texto a la izquierda */
+  background-color:rgba(11, 162, 238, 0.548);
+  border-radius: 40px;
+  text-align: center;
+  }
+
+.contenido-info h2 {
+  font-size: 40px; 
+  color: #000000; 
+  text-align: left; /* Centra el texto */
+  padding-left: 10px;
+  text-align: center;
+  }
+      
+.contenido-info p {
+  text-align: left; 
+  color: white; 
+  font-size: 20px; 
+  padding-left: 10px;
+  padding-bottom: 1%;
+  }
+
+.idiomas{
+  background-color: #6ddf1a;
+  padding: 1%;
+  border: #dbdbdb;
+  border-radius: 10%;
+  color:black;
+  font-size:larger;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  margin-bottom: 2%;
+}
+.idiomas:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cursos{
+  display: flex;
+}
+.contenido-ventajas h2 {
+font-size: 40px; 
+color: #000000; 
+text-align: left; /* Centra el texto */
+padding-left: 10px;
+}
+
+.contenido-ventajas p {
+text-align: left; 
+color: white; 
+font-size: 20px; 
+padding-left: 10px;
+}
+
+.seccion-ventajas {
+flex-direction: row; /* Asegura que el texto esté a la izquierda y la imagen a la derecha */
+}
+
+.seccion-ventajas {
+background-blend-mode: overlay; /* Mezcla de fondo */
+}
+
+.pagos{
+  background-color: #6ddf1a;
+  padding: 1%;
+  border: #dbdbdb;
+  border-radius: 10%;
+  color:black;
+  font-size:larger;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+.pagos:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.pago{
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-bottom: 1%;
+  padding-top: 0.1%;
+  margin-top: 1%;
+  background-color:rgba(11, 162, 238, 0.548);
+  border-radius: 40px;
+}
+
+/* Estilos footer*/
+
+footer{
+background-color: rgb(0, 0, 0, 0.719);
+
+width: 100%;
+padding: 20px 0 20px 0;
+color: white;
+
+justify-content: center;
+align-items: center;
+position: relative; /* Necesario para posicionar las redes sociales */  
+
+
+}
+
+.titulo_formulario{
+text-align:left;
+padding-left: 20%;
+}
+
+.formulario{
+  padding-left: 150px;
+  padding-bottom: 5%;
+}
+
+form.formulario {
+display: flex;
+flex-direction: column;
+gap: 15px; /* Espacio opcional entre los elementos */
+margin-left: 260px;
+
+}
+.formulario input{
+width: 500px;
+}
+#idioma{
+width: 508px;
+}
+.checkbox{
+display: flex;
+align-items: center; 
+gap: 20px; /* Espacio entre la casilla y el texto */  
+}
+.checkbox2{
+display: flex;
+align-items: center; 
+gap: 10px; /* Espacio entre la casilla y el texto */
+}
+
+.enviar{
+background-color:#6ddf1a;
+border-radius: 50px;
+width: 5px;
+}
+.WhatsApp{
+width: 40px;
+height: 40px;
+}
+.Instagram{
+width: 40px;
+height: 40px;
+}
+.Facebook{
+width: 40px;
+height: 40px;
+}
+.redes_sociales {
+position: absolute;
+bottom: 10px; /* Ajusta según prefieras la distancia desde abajo */
+right: 10px; /* Ajusta según prefieras la distancia desde la derecha */
+display: flex;
+gap: 10px; /* Espacio entre los íconos */
+}
+a{
+color: green;
+}
+
+
+.terminos-privacidad {
+  position: absolute;
+  bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+  right: 50%; /* Ajusta la distancia desde el borde derecho */
+  text-align: center; /* Alinea los enlaces a la derecha */
+}
+
+.terminos-privacidad a {
+  display: block; /* Opcional: Cada enlace en una línea separada */
+  margin: 10px 0; /* Margen entre enlaces */
+  
+  
+  text-decoration: none; /* Elimina subrayado */
+}
+
+.terminos-privacidad a:hover {
+  text-decoration: underline; /* Se subraya cuando se pasa el mouse */
+}
+.copyright{
+  position: absolute;
+  bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+  right: 81%; /* Ajusta la distancia desde el borde derecho */
+  text-align: center; /* Alinea los enlaces a la derecha */
+}

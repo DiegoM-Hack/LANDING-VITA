@@ -1,12 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Encabezado from './componentes/encabezado';
-import Informacion from './componentes/Informacion';
+import encabezado from './componentes/Encabezado';
+import MisionVision from './componentes/MisionVision';
+import DescripcionCurso from './componentes/DescripcionCurso';
+import VentajasBeneficios from './componentes/VentajasBeneficios';
+import Ubicacion from './componentes/Ubicacion';
+import FormularioInscripcion from './componentes/FormularioInscripcion';
 import PortalEnLinea from './paginas/PortalEnLinea';
-
-
-
-
-
 
 function App() {
   return (
@@ -17,8 +16,12 @@ function App() {
           path="/"
           element={
             <>
-              <Encabezado /> {/* Encabezado visible solo en la página principal */}
-              <Informacion /> {/* Información principal */}
+              <encabezado /> 
+              <MisionVision />
+              <DescripcionCurso />
+              <VentajasBeneficios />
+              <Ubicacion />
+              <FormularioInscripcion />
             </>
           }
         />
@@ -28,8 +31,6 @@ function App() {
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;
-
-
