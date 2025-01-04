@@ -6,6 +6,7 @@ import VentajasBeneficios from './componentes/VentajasBeneficios';
 import Ubicacion from './componentes/Ubicacion';
 import FormularioInscripcion from './componentes/FormularioInscripcion';
 import PortalEnLinea from './paginas/PortalEnLinea';
+import Idiomas from './paginas/Idiomas';
 
 function App() {
   return (
@@ -28,8 +29,12 @@ function App() {
 
         {/* Página del portal, solo muestra el portal */}
         <Route path="/portal" element={<PortalEnLinea />} />
+        <Route path="/idiomas" element={<Idiomas />} />
       </Routes>
+
     </Router>
+    
+
   );
 }
 
