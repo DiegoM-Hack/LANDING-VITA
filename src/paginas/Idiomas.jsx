@@ -1,4 +1,4 @@
-
+import '../estilos/idiomas.css'
 
 
 
@@ -26,6 +26,7 @@ function Idiomas() {
           <p>Modalidades: Presencial y Virtual</p>
           <p>Duración: 80 horas</p>
           <button className="boton_idiomas">Agenda tu examen de ubicación</button>
+          
         </div>
         <div className="contenedor_hijo1">
           <img className="imagenes_idiomas" src="/imagenes/frances.png" alt="Imagen Francés" />
