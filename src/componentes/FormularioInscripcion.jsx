@@ -15,15 +15,18 @@ function FormularioInscripcion() {
             <option value="japones">Japonés</option>
           </select>
   
+          <div className="term1">
           <div className="checkbox">
-            <label for="politicasdeprivacidad"> He leído y acepto las Politicas de Privacidad</label>
-            <input id="politicas" type="checkbox" required />
+          <input className="ch1" type="checkbox" required />
+          <label className="lbl1" > He leído y acepto las Politicas de Privacidad</label>
           </div>
           <div className="checkbox2">
-            <label for="terminosycondiciones"> He leído y acepto los Terminos y Condiciones</label>
-            <input className="terminos" type="checkbox" required />
+          <input className="ch2" type="checkbox" required />
+            <label className="lbl2" > He leído y acepto los Terminos y Condiciones</label>
           </div>
           <input className="enviar" type="submit" value="Enviar" />
+          </div>
+          
         </form>
         <div className="redes_sociales">
           <a href="https://wa.me/593979240408" target="_blank">

@@ -1,5 +1,8 @@
+import React from 'react';
+
 function Ubicacion() {
-    return (
+  return (
+    <>
       <section className="location" id="ubicacion">
         <div className="map-container">
           <h2>Encuéntranos aquí</h2>
@@ -11,6 +14,7 @@ function Ubicacion() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="Ubicación de la Escuela Politécnica Nacional"
           ></iframe>
         </div>
         <div>
@@ -20,11 +24,27 @@ function Ubicacion() {
             height="400"
             src="https://www.youtube.com/embed/tgKVIFYbWgw"
             title="Cursos GRATIS para APRENDER INGLÉS"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
           ></iframe>
         </div>
       </section>
-    );
-  }
-  
-  export default Ubicacion;
-  
+
+      <section className="pagos-seccion">
+        <div className="pago">
+          <h1>¿Te interesa?</h1>
+          <h2>Consulta nuestras formas de pago</h2>
+          <button 
+            className="pagos" 
+            onClick={() => window.location.href = 'f_pago.html'}
+          >
+            Ingresar
+          </button>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default Ubicacion;

@@ -1,14 +1,21 @@
 /* Estilo general*/
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
   background-image: url(https://londresando.com/wp-content/uploads/sites/15/2022/03/big-ben-londres.jpeg);
   background-size: cover;
   background-position: center; /* Centra la imagen de fondo */
   background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
   padding: 0; /* Elimina padding del cuerpo */
   
+  
 }
+/* Aplicar la misma fuente a toda la página */
+* {
+  font-family: 'Roboto', sans-serif;
+ 
+  
+}
+
 
 /* Encabezado */
 .header {
@@ -146,13 +153,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
 .nav a:hover {
 color: #000000; /* Color al pasar el mouse */
 }
@@ -219,10 +219,10 @@ background-color: rgba(112, 114, 116, 0.7);
   border-radius: 8%;
 }
 .mision p{
-  color: #dbdbdb;
+  color: #ffffff;
 }
 .vision p{
-  color: #dbdbdb;
+  color: #ffffff;
 }
 .vision{
 background: rgba(11, 162, 238, 0.548);
@@ -257,8 +257,11 @@ margin: 50px;
 border-radius: 50px;
 text-align: center;
 color: white;
+padding: 1%;
 }
-
+.descripcion1 p{
+  color: white;
+  }
 .title2{
 color: black;
 }
@@ -267,14 +270,32 @@ color: black;
 justify-content: center;
 margin-top: 10px;
 }
-
+.map-container h2{
+color: #000000;
+  }
 /*Pocicio del video*/
 .video1{
 padding-top: 120px;
 padding-right: 100px;
 border-color:rgba(0, 0, 0, 0);
-}
 
+}
+.pagos-seccion{
+text-align: center;
+background-color: rgba(112, 114, 116, 0.7);
+padding-top: 5%;
+margin-bottom: 0%;
+}
+.pagos-seccion h1{
+  color: #ffffff;
+  }
+
+  .pagos-seccion h2{
+    color: #000000;
+    }
+button{
+  color: #dbdbdb;
+}
 /*Seccion de ubicacion*/
 .location {
 display: flex;
@@ -324,6 +345,8 @@ flex: 1; /* Cada contenido ocupa igual espacio */
 text-align: left; /* Alinea el texto a la izquierda */
 background-color:rgba(11, 162, 238, 0.548);
 border-radius: 40px;
+font-family: 'Roboto', sans-serif;
+
 }
 
 .contenido-info {
@@ -373,12 +396,13 @@ font-size: 40px;
 color: #000000; 
 text-align: left; /* Centra el texto */
 padding-left: 10px;
+
 }
 
 .contenido-ventajas p {
 text-align: left; 
 color: white; 
-font-size: 20px; 
+font-size: 15px; 
 padding-left: 10px;
 }
 
@@ -391,13 +415,14 @@ background-blend-mode: overlay; /* Mezcla de fondo */
 }
 
 .pagos{
-  background-color: #6ddf1a;
+  background-color: #002a52;
   padding: 1%;
   border: #dbdbdb;
   border-radius: 10%;
-  color:rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
   font-size:larger;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
   
 }
 .pagos:hover {
@@ -427,47 +452,65 @@ justify-content: center;
 align-items: center;
 position: relative; /* Necesario para posicionar las redes sociales */  
 
-
-}
-
-.titulo_formulario{
-text-align:left;
-padding-left: 20%;
 }
 
 .formulario{
   padding-left: 150px;
   padding-bottom: 5%;
+  margin-right: 15%;
+  justify-content: center;
+  align-items: center ;
+  text-align: center;
 }
 
 form.formulario {
 display: flex;
 flex-direction: column;
-gap: 15px; /* Espacio opcional entre los elementos */
+gap: 5px; /* Espacio opcional entre los elementos */
 margin-left: 260px;
 
 }
 .formulario input{
 width: 500px;
 }
+.formulario_input{
+  margin-right: 20%;
+}
+
+.titulo_formulario{
+  color: #ffffff;
+  padding-right: 25%;
+}
 #idioma{
 width: 508px;
+margin-right: 20%;
 }
-.checkbox{
-display: flex;
-align-items: center; 
-gap: 20px; /* Espacio entre la casilla y el texto */  
+
+
+.checkbox2,.checkbox{
+  display:flex; 
+  align-items: end; 
+  
+  }
+.lbl1,.lbl2{
+  color: #ffffff;
+  padding-right: 2%;
+
 }
-.checkbox2{
-display: flex;
-align-items: center; 
-gap: 10px; /* Espacio entre la casilla y el texto */
+.term1{
+text-align: left;
+justify-content: center;
+}
+
+.ch1,.ch2{
+margin-right: -30%;
+margin-left: -20%;
 }
 
 .enviar{
-background-color:#6ddf1a;
+  background-color: #002a52;
 border-radius: 50px;
-width: 5px;
+margin-left: 5%;
 }
 .WhatsApp{
 width: 40px;
@@ -496,8 +539,13 @@ color: green;
 .terminos-privacidad {
   position: absolute;
   bottom: 10px; /* Ajusta la distancia desde el borde inferior */
-  right: 50%; /* Ajusta la distancia desde el borde derecho */
   text-align: center; /* Alinea los enlaces a la derecha */
+  margin: 5%;
+  justify-content: center;
+}
+
+.terminos-privacidad a{
+  margin-left: 10%;
 }
 
 .terminos-privacidad a {
@@ -516,5 +564,5 @@ color: green;
   bottom: 10px; /* Ajusta la distancia desde el borde inferior */
   right: 81%; /* Ajusta la distancia desde el borde derecho */
   text-align: center; /* Alinea los enlaces a la derecha */
+  color: #e2f4f7;
 }
-

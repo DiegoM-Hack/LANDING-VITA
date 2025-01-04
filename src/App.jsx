@@ -23,6 +23,8 @@ function App() {
               <VentajasBeneficios />
               <Ubicacion />
               <FormularioInscripcion />
+              
+
             </>
           }
         />

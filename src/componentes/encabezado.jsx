@@ -8,11 +8,10 @@ const Encabezado = () => {
         <img src="./imagenes/icono.png" alt="Logo" />
       </div>
       <nav className="nav">
-        <Link to="App">Home</Link>
-        <a href="#descripcion">Descripción</a>
+        <Link to="/App">Home</Link>
+        <Link to="/nosotros" >Certificaciones</Link>
         <Link to="/idiomas" >Idiomas</Link>
-        <a href="#informacion">Información</a>
-        <a href="nostros.html" target="_blank">Nosotros</a>
+        <a href="./paginas/Nosotros.jsx">Formas de pago</a>
         <Link to="/portal" target='_blank'>Portal en Línea</Link>
       </nav>
     </header>

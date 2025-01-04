@@ -7,7 +7,7 @@ function Idiomas() {
     <>
       <header className="header">
         <div className="logo">
-          <img src="/imagenes/logoD.png" alt="Logo" />
+          <img src="/imagenes/icono.png" alt="Logo" />
         </div>
         <nav className="nav">
           <a href="index.html">Home</a>
