@@ -1,0 +1,114 @@
+
+body{
+    background-image: url(https://londresando.com/wp-content/uploads/sites/15/2022/03/big-ben-londres.jpeg);
+    background-size: cover;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 10px 20px;
+    }
+    /* Navegación */
+.nav {
+    display: flex;
+    gap: 20px;
+    font-family:cursive;
+    }
+
+
+.logo img {
+        height: 100px; /* tamaño del logo */
+        }
+
+.payment-card {
+    width: 400px; /* Ancho reducido */
+    height: 250px; /* Alto fijo */
+    display: flex; /* Alineación interna */
+    flex-direction: column; /* Elementos organizados en columna */
+    justify-content: center; /* Centrar verticalmente el contenido */
+    align-items: center; /* Centrar horizontalmente el contenido */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    text-align: center;
+    color: black;
+    background-color: #0691ee9a;
+}
+
+.payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.forma{
+    text-align: center;
+    background-color: #000000ad;
+    color:beige;
+}
+.payment-card img {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.payment-card h5 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+    font-size: 20pt;
+}
+
+.payment-card p {
+    font-size: 14px;
+    color: #000000;
+    font-size: 12pt;
+
+}
+
+footer{
+    background-color: rgb(0, 0, 0, 0.719);
+    
+    width: 100%;
+    
+    padding: 20px 0 90px 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Necesario para posicionar las redes sociales */ }
+
+    .WhatsApp{
+        width: 40px;
+        height: 40px;
+    }
+    .Instagram{
+        width: 50px;
+        height: 40px;
+    }
+    .Facebook{
+        width: 40px;
+        height: 40px;
+    }
+    .redes_sociales {
+        position: absolute;
+        bottom: 10px; /* Ajusta según prefieras la distancia desde abajo */
+        right: 10px; /* Ajusta según prefieras la distancia desde la derecha */
+        display: flex;
+        gap: 10px; /* Espacio entre los íconos */
+    }
+    .copyright{
+        position: absolute;
+        bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+        right: 81%; /* Ajusta la distancia desde el borde derecho */
+        text-align: center; /* Alinea los enlaces a la derecha */
+    }
+.row_g-4{
+    display: flex;
+    flex-wrap: wrap; /* Permite que los cuadros se ajusten en filas */
+    justify-content: space-evenly; /* Espaciado uniforme entre los cuadros */
+    gap: 10px;
+
+}

@@ -11,7 +11,7 @@ const Encabezado = () => {
         <Link to="/App">Home</Link>
         <Link to="/nosotros" >Certificaciones</Link>
         <Link to="/idiomas" >Idiomas</Link>
-        <a href="./paginas/Nosotros.jsx">Formas de pago</a>
+        <Link to="/pago" >Formas de pago</Link>
         <Link to="/portal" target='_blank'>Portal en Línea</Link>
       </nav>
     </header>
