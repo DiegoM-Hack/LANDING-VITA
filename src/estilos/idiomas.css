@@ -15,6 +15,7 @@ body {
     justify-content: space-between;
     background-color: #3498db; 
     padding:5px 20px;
+
   }
 body{
     display: flex;
@@ -78,14 +79,15 @@ body{
     gap: 30px;
     margin-top: 1%;
     margin-bottom: 1%;
-    width: 1000px;
+    width: 1340px;
+
 }
 
 .contenedor_hijo1 {
     border: 1px solid #ccc; /* Opcional: para visualizar mejor las cajas */
     padding: 20px; /* Espaciado interno */
-    width: 100%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para un mejor diseño */
+    width: 150%;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional para un mejor diseño */
     text-align: center; /* Centrar texto dentro de las cajas */
     background-color: rgba(0, 48, 87, 0.678);
     color: white;
