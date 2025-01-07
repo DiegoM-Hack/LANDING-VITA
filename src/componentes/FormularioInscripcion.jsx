@@ -40,15 +40,7 @@ function FormularioInscripcion() {
             <img className="Facebook" src="imagenes/facebock logo.png" alt="Facebook" />
           </a>
         </div>
-  
-        <div className="terminos-privacidad">
-          <a href="privacidad.html" target="_blank">
-            Ver Politicas de Privacidad
-          </a>
-          <a href="terminos.html" target="_blank">
-            Ver Terminos y Condiciones
-          </a>
-        </div>
+
         <div className="copyright">
           <p>&copy; Instituto de idiomas. Todos los derechos reservados.</p>
         </div>

@@ -1,22 +1,14 @@
 import '../estilos/idiomas.css'
+import Encabezado from '../componentes/Encabezado';
+
 
 
 
 function Idiomas() {
   return (
     <>
-      <header className="header">
-        <div className="logo">
-          <img src="/imagenes/icono.png" alt="Logo" />
-        </div>
-        <nav className="nav">
-          <a href="index.html">Home</a>
-          <a href="nosotros.html">Certificaciones</a>
-          <a href="idiomas.html">Idiomas</a>
-          <a href="f_pago.html">Formas de Pago</a>
-          <a href="portal.html">Portal</a>
-        </nav>
-      </header>
+    <Encabezado />
+      
       <section className="contenedor_Padre">
         <div className="contenedor_hijo1">
           <img className="imagenes_idiomas" src="/imagenes/ingles2.png" alt="Imagen Inglés" />

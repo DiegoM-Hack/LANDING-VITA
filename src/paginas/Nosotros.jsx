@@ -1,4 +1,6 @@
 import '../estilos/nosotros.css';
+import Encabezado from '../componentes/Encabezado';
+
 
 
  const Nosotros = () => {
@@ -6,6 +8,7 @@ import '../estilos/nosotros.css';
        <>
     
 
+    <Encabezado />
     
     <section class="seccion-certificados" id="certificados">
         <h2>Certificados que Ofrecemos</h2>

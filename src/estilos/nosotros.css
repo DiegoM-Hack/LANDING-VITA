@@ -2,7 +2,11 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #0000007a;
+     background-image: url(https://londresando.com/wp-content/uploads/sites/15/2022/03/big-ben-londres.jpeg);
+  background-size: cover;
+  background-position: center; /* Centra la imagen de fondo */
+  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
 }
 
 /* Encabezado */
@@ -61,19 +65,20 @@ body {
 /* Sección de certificados */
 .seccion-certificados {
     padding: 50px 20px;
-    background-color: #ffffff;
     text-align: center;
+    background-color: #02040585;
+    
 }
 
 .seccion-certificados h2 {
     font-size: 30px;
-    color: #2c3e50;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .seccion-certificados p {
     font-size: 18px;
-    color: #7f8c8d;
+    color: #ffffff;
     margin-bottom: 30px;
     margin-inline: 25%;
 }
@@ -88,7 +93,7 @@ body {
 
 .seccion-certificados li {
     font-size: 16px;
-    color: #34495e;
+    color: #fafafa;
     margin: 5px 0;
 }
 
@@ -124,19 +129,19 @@ body {
 /* Sección de galería */
 .seccion-galeria {
     padding: 50px 20px;
-    background-color: #ecf0f1;
+    background-color: #02040585;
     text-align: center;
 }
 
 .seccion-galeria h2 {
     font-size: 30px;
-    color: #2c3e50;
+    color: hsl(0, 0%, 100%);
     margin-bottom: 20px;
 }
 
 .seccion-galeria p {
     font-size: 18px;
-    color: #7f8c8d;
+    color: #ffffff;
     margin-bottom: 30px;
 }
 

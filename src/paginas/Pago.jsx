@@ -1,18 +1,12 @@
 import '../estilos/Pago.css'
+import Encabezado from '../componentes/Encabezado';
 
 
 const Pago = () => {
   return (
     <div>
       {/* Header */}
-      <header className="header">
-        {/* Logo */}
-        <div className="logo">
-          <img src="/imagenes/logoD.png" alt="Logo" />
-        </div>
-        {/* Navegación */}
-        
-      </header>
+      <Encabezado />
 
       {/* Contenido principal */}
       <div className="container py-5">
