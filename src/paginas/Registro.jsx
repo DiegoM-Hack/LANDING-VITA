@@ -1,33 +1,31 @@
-import { useNavigate } from 'react-router-dom';
 import '../estilos/portal.css';
 import Encabezado from '../componentes/Encabezado';
 
-const PortalEnLinea = () => {
-  const navigate = useNavigate();
+const Register = () => {
   return (
     <>
       <Encabezado />
       <div className="background">
-        <div className="login-container">
+      <div className="register-container">
           <div className="headerportal">
-            <h1>English<span>•</span>Course</h1>
+            <h1>Registro</h1>
           </div>
-          <div className="login-box">
-            <img src="./imagenes/logoD.png" className="logo" alt="Logo" />
-            <h2>Portal En Línea</h2>
-            <form>
-              <input type="text" placeholder="Correo Electrónico" required />
-              <input type="password" placeholder="Contraseña" required />
-              <select>
-                <option value="estudiante">Estudiante</option>
-                <option value="docente">Docente</option>
-              </select>
-              <button type="submit" className="btn-primary">Iniciar Sesión</button>
-              <a href="#" className="forgot-link">¿Olvidó su contraseña?</a>
-            </form>
-            <hr />
-            <p>¿Eres nuevo aquí?<br />Examen de ubicación o matrícula</p>
-            <button className="btn-secondary" onClick={() => navigate('/registro')}>Regístrate</button>
+          <div className="register-box">
+          <img src="./imagenes/logoD.png" className="logo" alt="Logo" />
+          <h2>Crear Cuenta</h2>
+          <form>
+            <input type="text" placeholder="Nombre" required />
+            <input type="text" placeholder="Apellido" required />
+            <input type="email" placeholder="Correo Electrónico" required />
+            <input type="password" placeholder="Contraseña" required />
+            <input type="password" placeholder="Confirmar Contraseña" required />
+            <select required>
+              <option value="" disabled selected>Selecciona tu rol</option>
+              <option value="estudiante">Estudiante</option>
+              <option value="docente">Docente</option>
+            </select>
+            <button type="submit" className="btn-primary">Crear</button>
+          </form>
           </div>
         </div>
         <footer>
@@ -51,4 +49,4 @@ const PortalEnLinea = () => {
   );
 };
 
-export default PortalEnLinea;
+export default Register;

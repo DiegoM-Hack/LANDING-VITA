@@ -9,7 +9,7 @@ import PortalEnLinea from './paginas/PortalEnLinea';
 import Idiomas from './paginas/Idiomas';
 import Nosotros from './paginas/Nosotros';
 import Pago from './paginas/Pago';
-
+import Registro from './paginas/Registro';
 
 function App() {
   return (
@@ -37,6 +37,7 @@ function App() {
         <Route path="/idiomas" element={<Idiomas />} />
         <Route path="/pago" element={<Pago/>} />
         <Route path="/nosotros" element={<Nosotros/>} />
+        <Route path="/registro" element={<Registro />} />
       </Routes>
 
     </Router>
