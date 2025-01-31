@@ -1,8 +1,11 @@
 import '../estilos/portal.css';
 import Encabezado from '../componentes/Encabezado';
+import registro from '../componentes/principal';
+import { Route } from 'react-router-dom';
 
 const PortalEnLinea = () => {
   return (
+    <Route>
     <>
       <Encabezado />
       <div className="background">
@@ -21,11 +24,12 @@ const PortalEnLinea = () => {
                 <option value="docente">Docente</option>
               </select>
               <button type="submit" className="btn-primary">Iniciar Sesión</button>
-              <a href="#" className="forgot-link">¿Olvidó su contraseña?</a>
+              <a href={registro} className="forgot-link">¿Olvidó su contraseña?</a>
             </form>
             <hr />
             <p>¿Eres nuevo aquí?<br />Examen de ubicación o matrícula</p>
-            <button className="btn-secondary">Regístrate</button>
+            <button className="btn-secondary" >Regístrate</button>
+            <a href={registro} className="forgot-link">¿Olvidó su contraseña?</a>
           </div>
         </div>
         <footer>
@@ -46,6 +50,8 @@ const PortalEnLinea = () => {
         </footer>
       </div>
     </>
+    <Route path="/registro" element={<registro/>} />
+</Route>
   );
 };
 
