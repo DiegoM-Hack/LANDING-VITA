@@ -21,17 +21,19 @@ const Registro = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (formData.contraseña !== formData.confirmarContraseña) {
       setMensaje('Las contraseñas no coinciden');
       return;
     }
 
     try {
+      // Guardamos la contraseña también en la base de datos (aunque en producción deberías encriptarla)
       await addDoc(collection(db, 'usuarios'), {
         nombre: formData.nombre,
         apellido: formData.apellido,
         email: formData.email,
+        contraseña: formData.contraseña, // Guardar la contraseña
         rol: formData.rol,
         fechaRegistro: new Date()
       });

@@ -1,9 +1,47 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { db, getDocs, collection } from '../servicios/firebase';
 import '../estilos/portal.css';
 import Encabezado from '../componentes/Encabezado';
 
 const PortalEnLinea = () => {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({ email: '', contraseña: '', rol: 'estudiante' });
+  const [mensaje, setMensaje] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const usuariosRef = collection(db, 'usuarios');
+      const snapshot = await getDocs(usuariosRef);
+      let usuarioEncontrado = null;
+
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        if (data.email === formData.email && data.contraseña === formData.contraseña) {
+          usuarioEncontrado = data;
+        }
+      });
+
+      if (usuarioEncontrado) {
+        if (usuarioEncontrado.rol === 'estudiante') {
+          navigate('/estudiante');  // Redirige a la página de Estudiante
+        } else if (usuarioEncontrado.rol === 'docente') {
+          navigate('/docente');  // Redirige a la página de Docente
+        }
+      } else {
+        setMensaje('Correo o contraseña incorrectos');
+      }
+    } catch (error) {
+      setMensaje('Error al iniciar sesión: ' + error.message);
+    }
+  };
+
   return (
     <>
       <Encabezado />
@@ -15,14 +53,15 @@ const PortalEnLinea = () => {
           <div className="login-box">
             <img src="./imagenes/logoD.png" className="logo" alt="Logo" />
             <h2>Portal En Línea</h2>
-            <form>
-              <input type="text" placeholder="Correo Electrónico" required />
-              <input type="password" placeholder="Contraseña" required />
-              <select>
+            <form onSubmit={handleSubmit}>
+              <input type="text" name="email" placeholder="Correo Electrónico" value={formData.email} onChange={handleChange} required />
+              <input type="password" name="contraseña" placeholder="Contraseña" value={formData.contraseña} onChange={handleChange} required />
+              <select name="rol" value={formData.rol} onChange={handleChange} required>
                 <option value="estudiante">Estudiante</option>
                 <option value="docente">Docente</option>
               </select>
               <button type="submit" className="btn-primary">Iniciar Sesión</button>
+              {mensaje && <p>{mensaje}</p>}
               <a href="#" className="forgot-link">¿Olvidó su contraseña?</a>
             </form>
             <hr />
@@ -30,22 +69,6 @@ const PortalEnLinea = () => {
             <button className="btn-secondary" onClick={() => navigate('/registro')}>Regístrate</button>
           </div>
         </div>
-        <footer>
-          <div className="redes_sociales">
-            <a href="https://wa.me/593979240408" target="_blank" rel="noopener noreferrer">
-              <img className="WhatsApp" src="/imagenes/WhatsApp.png" alt="WhatsApp" />
-            </a>
-            <a href="https://www.instagram.com/cec_epn/" target="_blank" rel="noopener noreferrer">
-              <img className="Instagram" src="/imagenes/Instagram-Logo.png" alt="Instagram" />
-            </a>
-            <a href="https://www.facebook.com/CEC.EPN.EC" target="_blank" rel="noopener noreferrer">
-              <img className="Facebook" src="/imagenes/facebock logo.png" alt="Facebook" />
-            </a>
-          </div>
-          <div className="copyright">
-            <p>&copy; Instituto de idiomas. Todos los derechos reservados.</p>
-          </div>
-        </footer>
       </div>
     </>
   );
