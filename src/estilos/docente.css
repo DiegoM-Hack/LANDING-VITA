@@ -1,0 +1,155 @@
+/* Estilo general para el contenedor de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ff0000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Contenedor principal */
+  div {
+    margin: 20px;
+  }
+  
+  /* Títulos */
+  h2, h3 {
+    color: #333;
+  }
+  
+  /* Formulario y tabla de usuario */
+  .crud-container {
+    background-color: #a10707;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  /* Formulario */
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"], input[type="email"], input[type="password"], button {
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button[type="button"] {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #e53935;
+  }
+  
+  /* Tabla de usuarios */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: #007ef56c;
+  }
+  
+.tituloC{
+    color: #ffffff;
+}
+
+  td button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  td button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Estilos para la sección de agregar/editar usuario */
+  h3 {
+    margin-top: 0;
+    color: #ffffff;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    width: 100%;
+  }
+  
+  form button {
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  /* Estilo para los botones de acción (Editar, Eliminar) */
+  button[type="button"] {
+    width: auto;
+    padding: 5px 10px;
+    background-color: #f44336;
+    margin-top: 10px;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #e53935;
+  }
+  
+  form button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Fondo del contenedor de la tabla y el formulario */
+  .crud-container {
+    background-color: #00000091;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo para el contenedor de tabla */
+  .table-container {
+    background-color: #0000006c;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -1,0 +1,104 @@
+/* Estilos generales para la página de Estudiantes */
+.estudiantes-container {
+    padding: 20px;
+  background-color:rgba(11, 162, 238, 0.767);
+    
+}
+
+.estudiantes-container p {
+    color: white;
+    font-size: 1em;  /* Ajuste de tamaño de fuente para una mejor lectura */
+}
+
+/* Sección de Introducción */
+.estudiantes-introduccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.estudiantes-introduccion h1 {
+    font-size: 3em;  /* Aumento en el tamaño de fuente para destacar */
+    color: #000000; /* Color cálido para el título */
+}
+
+.estudiantes-introduccion p {
+    font-size: 1.2em;
+    color: #f4f4f4;  /* Color de texto más suave para mejorar la lectura */
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Sección de Beneficios */
+.estudiantes-beneficios {
+  background-color:rgba(11, 162, 238, 0.692);
+    
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  /* Sombra más difusa para mayor profundidad */
+    margin-bottom: 40px;
+}
+
+.estudiantes-beneficios h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #000000;  /* Color cálido que resalta contra el fondo oscuro */
+}
+
+.estudiantes-beneficios ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);  /* Color de texto más suave */
+}
+
+.estudiantes-beneficios li {
+    font-size: 1.1em;
+    color: #ffffff;  /* Color blanco para una mejor visibilidad */
+    margin-bottom: 10px;
+}
+
+/* Sección de Testimonios */
+.estudiantes-testimonios {
+    margin-bottom: 40px;
+}
+
+.estudiantes-testimonios h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #000000; /* Color cálido para el encabezado */
+}
+
+.estudiantes-testimonio {
+    text-align: center;
+    font-size: 1.2em;
+    color: #f4f4f4;  /* Texto más suave para los testimonios */
+    margin: 20px 0;
+}
+
+.estudiantes-testimonio span {
+    font-style: italic;
+    color: #ffffff; /* Color cálido para el nombre del estudiante */
+}
+
+/* Sección de Contacto */
+.estudiantes-contacto {
+  background-color:rgba(11, 162, 238, 0.692);
+    
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+}
+
+.estudiantes-contacto h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #000000; /* Color cálido */
+}
+
+.estudiantes-contacto p {
+    font-size: 1.2em;
+    color: #f4f4f4;  /* Texto suave */
+    line-height: 1.6;
+    text-align: center;
+}
