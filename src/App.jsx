@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Encabezado from './componentes/Encabezado';
+import Encabezado from './componentes/encabezado';
 import MisionVision from './componentes/MisionVision';
 import DescripcionCurso from './componentes/DescripcionCurso';
 import VentajasBeneficios from './componentes/VentajasBeneficios';
