@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Navigate } from 'react-router-dom'; // Importa Navigate para la redirección
 import { db, collection, addDoc } from '../servicios/firebase';
 import '../estilos/portal.css';
-import Encabezado from '../componentes/Encabezado';
+import Encabezado from '../componentes/encabezado';
 
 const Registro = () => {
   const [formData, setFormData] = useState({
