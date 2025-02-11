@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { db, getDocs, collection } from '../servicios/firebase';
 import '../estilos/portal.css';
-import Encabezado from '../componentes/Encabezado';
+import Encabezado from '../componentes/encabezado';
 
 const PortalEnLinea = () => {
   const [formData, setFormData] = useState({ email: '', contraseña: '', rol: 'estudiante' });
