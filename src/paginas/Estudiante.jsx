@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { db, collection, getDocs } from '../servicios/firebase';  // Asegúrate de importar las funciones de Firebase
+import { getAuth, signOut } from "firebase/auth";  
 import Encabezado from '../componentes/Encabezado';  // Importando el componente Encabezado
 import "../estilos/estudiantes.css";
 
@@ -22,6 +23,16 @@ const Estudiantes = () => {
       setLoading(false);
     }
   };
+    // Función para cerrar sesión
+    const handleLogout = async () => {
+      const auth = getAuth();
+      try {
+        await signOut(auth);
+        window.location.href = "/portal"; // Redirigir al login tras cerrar sesión
+      } catch (error) {
+        console.error("Error al cerrar sesión:", error);
+      }
+    };
 
   // Cargar los cursos al montar el componente
   useEffect(() => {
@@ -35,6 +46,7 @@ const Estudiantes = () => {
     }
 
     return (
+      
       <div className="estudiantes-cursos-container">
         <h2>Cursos de Idiomas Disponibles</h2>
         <div className="estudiantes-cursos-list">
@@ -58,6 +70,10 @@ const Estudiantes = () => {
       <Encabezado /> {/* Este componente está fuera del div .estudiantes-container */}
 
       <div className="estudiantes-container">
+        {/* Botón de Cerrar Sesión */}
+          <button className="logout-btn" onClick={handleLogout}>
+         Cerrar Sesión
+        </button>
         {/* Sección de Introducción */}
         <div className="estudiantes-introduccion">
           <h1>Bienvenido a los Cursos de Idiomas</h1>

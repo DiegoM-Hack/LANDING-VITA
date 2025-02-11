@@ -6,11 +6,7 @@ body {
     padding: 0;
   }
   
-  /* Contenedor principal */
-  div {
-    margin: 20px;
-  }
-  
+
   /* Títulos */
   h2, h3 {
     color: #333;

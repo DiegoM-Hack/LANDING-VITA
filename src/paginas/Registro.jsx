@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Navigate } from 'react-router-dom'; // Importa Navigate para la redirección
 import { db, collection, addDoc } from '../servicios/firebase';
 import '../estilos/portal.css';
 import Encabezado from '../componentes/Encabezado';
@@ -14,6 +15,7 @@ const Registro = () => {
   });
 
   const [mensaje, setMensaje] = useState('');
+  const [redirect, setRedirect] = useState(null); // Estado para redirección
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,12 +30,11 @@ const Registro = () => {
     }
 
     try {
-      // Guardamos la contraseña también en la base de datos (aunque en producción deberías encriptarla)
       await addDoc(collection(db, 'usuarios'), {
         nombre: formData.nombre,
         apellido: formData.apellido,
         email: formData.email,
-        contraseña: formData.contraseña, // Guardar la contraseña
+        contraseña: formData.contraseña, 
         rol: formData.rol,
         fechaRegistro: new Date()
       });
@@ -44,6 +45,11 @@ const Registro = () => {
       setMensaje('Error al registrar: ' + error.message);
     }
   };
+
+  // Si `redirect` tiene un valor, redirige a la página correspondiente
+  if (redirect) {
+    return <Navigate to={redirect} replace={true} />;
+  }
 
   return (
     <>
@@ -70,6 +76,10 @@ const Registro = () => {
               <button type="submit" className="btn-primary">Crear</button>
             </form>
             {mensaje && <p>{mensaje}</p>}
+
+            {/* Nuevo botón para volver al login */}
+            <p>¿Ya tienes una cuenta?</p>
+            <button className="btn-secondary" onClick={() => setRedirect('/portal')}>Iniciar Sesión</button>
           </div>
         </div>
       </div>

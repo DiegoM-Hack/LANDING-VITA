@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { db, collection, addDoc, getDocs, updateDoc, doc, deleteDoc } from '../servicios/firebase';  // Importa las funciones de Firebase
-import"../estilos/docente.css";
+import { db, collection, addDoc, getDocs, updateDoc, doc, deleteDoc } from '../servicios/firebase';
+import { getAuth, signOut } from "firebase/auth"; // Importación corregida
+import "../estilos/docente.css";
 
 const Docente = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -8,28 +9,43 @@ const Docente = () => {
   const [editing, setEditing] = useState(false);
   const [idEditando, setIdEditando] = useState(null);
 
-  // Obtener los usuarios desde Firestore
+  // Obtener los usuarios desde Firestore con manejo de errores
   const fetchUsuarios = async () => {
-    const querySnapshot = await getDocs(collection(db, "usuarios"));
-    const usuariosData = [];
-    querySnapshot.forEach((doc) => {
-      usuariosData.push({ id: doc.id, ...doc.data() });
-    });
-    setUsuarios(usuariosData);
+    try {
+      const querySnapshot = await getDocs(collection(db, "usuarios"));
+      const usuariosData = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+      setUsuarios(usuariosData);
+    } catch (error) {
+      console.error("Error al obtener los usuarios: ", error);
+    }
   };
 
-  // Guardar nuevo usuario
+  // Cargar usuarios al montar el componente
+  useEffect(() => {
+    fetchUsuarios();
+  }, []);
+
+  // Cerrar sesión
+  const handleLogout = async () => {
+    const auth = getAuth();
+    try {
+      await signOut(auth);
+      window.location.href = "/portal";
+    } catch (error) {
+      console.error("Error al cerrar sesión: ", error);
+    }
+  };
+
+  // Guardar o actualizar usuario
   const saveUsuario = async (e) => {
     e.preventDefault();
     try {
       if (editing) {
-        // Si estamos editando, actualizamos el usuario
         const usuarioRef = doc(db, "usuarios", idEditando);
         await updateDoc(usuarioRef, usuario);
         setEditing(false);
         setIdEditando(null);
       } else {
-        // Si no estamos editando, agregamos un nuevo usuario
         await addDoc(collection(db, "usuarios"), usuario);
       }
       setUsuario({ nombre: '', email: '', rol: '' });
@@ -50,24 +66,19 @@ const Docente = () => {
   // Eliminar usuario
   const deleteUsuario = async (id) => {
     try {
-      const usuarioRef = doc(db, "usuarios", id);
-      await deleteDoc(usuarioRef);
+      await deleteDoc(doc(db, "usuarios", id));
       fetchUsuarios();
     } catch (error) {
       console.error("Error al eliminar el usuario: ", error);
     }
   };
 
-  // Cargar usuarios al montar el componente
-  useEffect(() => {
-    fetchUsuarios();
-  }, []);
-
   return (
     <div className="crud-container">
-      {/* Formulario de agregar o editar usuario */}
+      <button className="logout-btn" onClick={handleLogout}>Cerrar Sesión</button>
+      
       <form onSubmit={saveUsuario}>
-        <h2 className='tituloC'>Bienvenido al sistema de Gestion de Usuarios</h2>
+        <h2 className='tituloC'>Bienvenido al sistema de Gestión de Usuarios</h2>
         <h3>{editing ? "Editar Usuario" : "Agregar Usuario"}</h3>
         <input
           type="text"
@@ -95,7 +106,6 @@ const Docente = () => {
         <button type="submit">{editing ? "Actualizar" : "Agregar"} Usuario</button>
       </form>
 
-      {/* Contenedor de la tabla */}
       <div className="table-container">
         <table>
           <thead>
