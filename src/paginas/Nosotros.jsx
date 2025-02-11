@@ -1,5 +1,5 @@
 import '../estilos/nosotros.css';
-import Encabezado from '../componentes/Encabezado';
+import Encabezado from '../componentes/encabezado';
 
 
 
