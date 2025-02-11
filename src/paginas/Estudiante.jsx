@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { db, collection, getDocs } from '../servicios/firebase';  // Asegúrate de importar las funciones de Firebase
 import { getAuth, signOut } from "firebase/auth";  
-import Encabezado from '../componentes/Encabezado';  // Importando el componente Encabezado
+import Encabezado from '../componentes/encabezado';  // Importando el componente Encabezado
 import "../estilos/estudiantes.css";
 
 const Estudiantes = () => {
